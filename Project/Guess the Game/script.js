@@ -11,7 +11,7 @@ let sn=Math.trunc(Math.random()*20+1);
 console.log(sn);
 
 let soc=20;
-
+let highscore=0;
 function guessTheNumber(){
 
 if(soc>0)
@@ -28,6 +28,14 @@ else if(guess==sn)
     document.querySelector('#message').textContent='🥳 You Won';
     document.querySelector('body').style.backgroundColor="green";
     document.querySelector('.number').textContent=guess;
+    
+    if(soc>highscore)
+{
+document.querySelector('.highscore').textContent=soc;
+highscore=soc;
+}
+
+
 }
 else if(guess>sn)
 {
@@ -56,3 +64,15 @@ else{
 }
 
 
+function resetGame()
+{
+    soc=20;
+    sn=Math.trunc(Math.random()*20+1);
+    console.log(sn);
+    document.querySelector('body').style.backgroundColor='#000';
+    document.querySelector('#message').textContent='Start guessing...';
+    document.querySelector('.score').textContent=soc;
+    document.querySelector('.number').textContent='?';
+    document.querySelector('.guess').value='';
+
+}
