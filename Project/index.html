@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function runsim()
+{
+let sum=0;
+for(let i=0;i<9999999999;i++)
+{
+    sum+=i;
+}
+document.querySelector('#para').textContent=sum;
+}
+function runalert()
+{
+    alert("this is alert box");
+}
+
+</script>
+</head>
+<body>
+   
+
+    <button onclick="runsim()"> Run</button>
+    <button onclick="runalert()">alert</button>
+    <p id="para">Result</p>
+    
+
+</body>
+</html>

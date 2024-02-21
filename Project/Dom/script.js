@@ -30,3 +30,53 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+let randno=(min,max)=> Math.floor(Math.random()*(max-min)+1);
+
+let rancolor=()=>`rgb(${randno(0,255)},${randno(0,255)},${randno(0,255)})`
+
+
+
+
+document.querySelectorAll('.nav__link').forEach(element=>{
+
+element.addEventListener('click',function()
+{
+this.style.backgroundColor=rancolor();
+
+})
+
+})
+
+
+addEventListener('click',function()
+{
+
+this.style.backgroundColor=rancolor();
+
+})
+
+array.forEach(element => {
+  
+});
+
+
+// document.querySelector('.nav__links').addEventListener('click',function(e)
+// {
+
+// this.style.backgroundColor=rancolor();
+
+
+// })
+// document.querySelector('.nav').addEventListener('click',function()
+// {
+
+// this.style.backgroundColor=rancolor();
+
+// })
+// document.querySelector('body').addEventListener('click',function()
+// {
+
+// this.style.backgroundColor=rancolor();
+
+// })
