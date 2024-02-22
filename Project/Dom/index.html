@@ -32,11 +32,20 @@
           <li class="nav__item">
             <a class="nav__link" href="#">Testimonials</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item openAcc">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
               >Open account</a
             >
           </li>
+
+          <li class="nav__item hidden usrblock">
+
+<a class="nav__link nav__link--btn  usr" href="#"
+              >hi </a
+            >
+          </li>
+
+
         </ul>
       </nav>
 
@@ -340,12 +349,12 @@
       </h2>
       <form class="modal__form">
         <label>First Name</label>
-        <input type="text" />
+        <input type="text" id="userName" />
         <label>Last Name</label>
         <input type="text" />
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <button class="btn" onclick="logIn()">Next step &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>

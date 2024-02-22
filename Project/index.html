@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <script>
-function runsim()
+
+function user()
 {
-let sum=0;
-for(let i=0;i<9999999999;i++)
+    usr={
+        name:'john'
+    }
+    display(usr);
+    
+}
+
+user();
+
+function display(u)
 {
-    sum+=i;
+    console.log(u.name);
 }
-document.querySelector('#para').textContent=sum;
-}
-function runalert()
-{
-    alert("this is alert box");
-}
+
 
 </script>
 </head>
