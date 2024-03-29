@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+.btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+body{
+    background-color: rgb(237, 237, 233);
+}
