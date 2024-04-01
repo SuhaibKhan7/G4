@@ -7,8 +7,8 @@
 }
 .TaskApp .deletebtn{
     background-color: red;
-    position: relative;
-    left: 30%;
+    position: absolute;
+    left: 50%;
     margin:5px;
 }
 .TaskApp h1{

@@ -2,12 +2,8 @@ import React from 'react'
 import {useState} from 'react'
 
 import '../App.css'
-export default function Task() {
-const[tasks,setTask]=useState([
-    {id:1,name:"This is task 1",complete:true},
-    {id:2,name:"This is task 2",complete:false},
-    {id:3,name:"This is task 3",complete:true},
-])
+export default function Task({tasks,setTask}) {
+
 function taskdelete(id)
 {
 setTask(tasks.filter((t)=>t.id!=id))
@@ -35,6 +31,7 @@ return(
 </li>    )}
 
     </ul>
+   
 </div>
 
 
