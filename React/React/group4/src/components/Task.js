@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 import '../App.css'
 export default function Task({tasks,setTask}) {
-
+console.log('Task')
 function taskdelete(id)
 {
 setTask(tasks.filter((t)=>t.id!=id))
