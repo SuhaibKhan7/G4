@@ -8,10 +8,11 @@ import CardData from './components/CardData';
 export default function App() {
   return (
     <div className=''>
-    
-    <Header/>
-    <TopSection/>
-    <CardData/>
+
+      <Header />
+      <TopSection />
+      <CardData />
+      
     </div>
   )
 }

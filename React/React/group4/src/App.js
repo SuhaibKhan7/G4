@@ -5,16 +5,20 @@ import AddTask from "./components/AddTask";
 import React from 'react'
 import{useState} from 'react'
 
+
+
 export default function App() {
  
   return (
     <>
     <Header/>
-    
    <HandleTask/>
     <Footer/>
+  
     </>
   )
+
+
 
   function HandleTask()
       {
