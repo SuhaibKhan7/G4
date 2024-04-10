@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Card from './Card';
 export default function CardData() {
 
     const products = [
@@ -23,34 +23,15 @@ export default function CardData() {
         }
         // Add more products as needed
     ];
-
-
   return (
     <section className='d-flex gap-3'>
-
+   
                 {
                 products.map( (p)=>{
-
-                 return   <div class="card w-25">
-                        <img src={p.img} class="card-img-top" alt="..."/>
-                            <div class="card-body">
-                                <h5 class="card-title">{p.title}</h5>
-                                <p class="card-text">{p.des}</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                    </div>
-
-
-
+                 return <Card id={p.id} title={p.title}  des={p.des} img={p.img} key={p.id}/>
                 }
-                )
-                
-                
-                
-                
+                )               
                 }
-
-
 
     </section>
   )
