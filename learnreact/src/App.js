@@ -3,15 +3,17 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopSection from './components/TopSection';
 import CardData from './components/CardData';
+import LearnUseEffect from './components/LearnUseEffect';
 
 
 export default function App() {
   return (
     <div className=''>
 
-      <Header />
+      {/* <Header />
       <TopSection />
-      <CardData />
+      <CardData /> */}
+      <LearnUseEffect/>
       
     </div>
   )
