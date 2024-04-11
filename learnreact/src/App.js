@@ -13,8 +13,8 @@ export default function App() {
       {/* <Header />
       <TopSection />
       <CardData /> */}
-      <LearnUseEffect/>
-      
+      {/* <LearnUseEffect/> */}
+
     </div>
   )
 }
