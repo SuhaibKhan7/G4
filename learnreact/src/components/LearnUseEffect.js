@@ -35,9 +35,7 @@ useEffect(()=>{
  async function getdata(){
    res= await fetch(url);
     data= await res.json();
-    setcard(url)
-
-
+    setcard(url);
 }
 getdata();
 },[url])
