@@ -8,7 +8,7 @@ export default function LearnUseEffect() {
   //   .then(data => {
   //     card = data
   //     console.log("card "+card)
-  //   })
+  //   }) //not a valid method _ no sync established
   const [card, setCard] = useState([]);
   const [url, setUrl] = useState('http://localhost:3004/products')
   useEffect(() => {
