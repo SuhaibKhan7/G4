@@ -29,6 +29,10 @@ export function useFetch(url) {
 
 
         getdata();
+
+
+
+        
     }, [])
 
     return {data,error};

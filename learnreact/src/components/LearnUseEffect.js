@@ -3,7 +3,7 @@ import { useFetch } from '../Hooks/useFetch'
 export default function LearnUseEffect() {
 
   const [counter, setCounter] = useState(0)
-  let [url, setUrl] = useState('http://localhost:3004/product')
+  let [url, setUrl] = useState('http://localhost:3004/products')
   let {data,error} = useFetch(url)
   return (
     <div>
