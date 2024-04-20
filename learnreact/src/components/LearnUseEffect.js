@@ -4,7 +4,8 @@ export default function LearnUseEffect() {
 
   const [counter, setCounter] = useState(0)
   let [url, setUrl] = useState('http://localhost:3004/products')
-  let {data,error} = useFetch(url)
+  let {data,error,loading} = useFetch(url);
+  
   return (
     <div>
       <h1>counter: {counter}</h1>
@@ -12,7 +13,8 @@ export default function LearnUseEffect() {
       <h1>printing JSON File</h1>
 
       <h1>{error}</h1>
-
+      {console.log(loading)}
+  {loading && <h4> Data is loading</h4>}
       <button className='bg-primary' onClick={() => setUrl('http://localhost:3004/products?instock=true')} >Instock</button>
       <button className='bg-danger' onClick={() => setUrl('http://localhost:3004/products?instock=false')}>OutOfstock</button>
       <div className='bg-success text-white p-3 ' >
