@@ -1,9 +1,9 @@
 const express = require('express');
-const bodyParse=require('body-parser');
-const cors=require('cors');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-
+// const bodyParse=require('body-parser');
+// const cors=require('cors');
+// const bodyParser = require('body-parser');
+// const mongoose = require('mongoose');
+// const path = require('path');
 
 main().catch(err => console.log(err));
 
@@ -21,14 +21,15 @@ const Userschema = new mongoose.Schema({
 const newUser = mongoose.model('newuser', Userschema);
 
 
-
-
 const server = express();
+
+
+server.use(express.static(path.join(__dirname, 'build')));
 server.use(cors())
 server.use(bodyParser.json())
 
 server.get('/',(req,res)=>{
-res.send()
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
 server.get('/signup', (req, res) => {
     res.json({username:'dileep'});
