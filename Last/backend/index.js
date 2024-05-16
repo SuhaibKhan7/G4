@@ -1,9 +1,9 @@
 const express = require('express');
-// const bodyParse=require('body-parser');
-// const cors=require('cors');
-// const bodyParser = require('body-parser');
-// const mongoose = require('mongoose');
-// const path = require('path');
+
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const path = require('path');
 
 main().catch(err => console.log(err));
 
@@ -25,27 +25,30 @@ const server = express();
 
 
 server.use(express.static(path.join(__dirname, 'build')));
+
+// app.use(express.static('public'))
+
 server.use(cors())
 server.use(bodyParser.json())
 
-server.get('/',(req,res)=>{
+server.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
 server.get('/signup', (req, res) => {
-    res.json({username:'dileep'});
+    res.json({ username: 'dileep' });
     console.log('**');
 });
-server.post('/signup',(req,res)=>{
+server.post('/signup', (req, res) => {
 
-    const user=new newUser();
-    user.name=req.body.username
+    const user = new newUser();
+    user.name = req.body.username
 
 
     console.log('post method')
     console.log(req.body)
     res.json(req.body.username);
     user.save();
-    
+
 })
 
 server.post('/login', async (req, res) => {
